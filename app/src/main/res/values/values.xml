@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="espacio_pequeño">6dp</dimen>
+    <dimen name="espacio_normal">12dp</dimen>
+    <dimen name="espacio_mediano">18dp</dimen>
+    <dimen name="espacio_largo">20dp</dimen>
+    <dimen name="espacio_xlargo">26dp</dimen>
+    <dimen name="espacio_xxlargo">36dp</dimen>
+    <dimen name="espacio_xxxlargo">50dp</dimen>
+
+    <dimen name="tam_txt_pequeño">10dp</dimen>
+    <dimen name="tam_txt_normal">14dp</dimen>
+    <dimen name="tam_txt_mediano">18dp</dimen>
+    <dimen name="tam_txt_grande">20sp</dimen>
+    <dimen name="tam_txt_muy_grande">24sp</dimen>
+
+</resources>
