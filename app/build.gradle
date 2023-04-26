@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.jght.nearbyplaces"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -20,6 +19,7 @@ android {
     dataBinding {
         enabled = true
     }
+    namespace 'com.jght.nearbyplaces'
 }
 
 ext {
