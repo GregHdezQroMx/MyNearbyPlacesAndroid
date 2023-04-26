@@ -13,7 +13,7 @@ Android Project with java, for locate near places about food (resturants) with g
 4. If user tap on a particular iten in place's list, then a new screen is showed for more details about Particular near place.
 5. For return to main screen, user can use android native "back" button.
 
-##Next Steps:
+## Next Steps:
 1. Migration to Kotlin
 2. Re structuration of Clean Architecture
 3. Migration of UI to Jetpack Compose
