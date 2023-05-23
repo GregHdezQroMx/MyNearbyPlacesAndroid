@@ -1,4 +1,16 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+def getGoogleMapsApiKey() {
+    def localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        def properties = new Properties()
+        localPropertiesFile.withInputStream { InputStream inputStream ->
+            properties.load(inputStream)
+        }
+        return properties.getProperty("GOOGLE_API_KEY", "")
+    } else {
+        return ""
+    }
+}
 
 buildscript {
     repositories {
@@ -12,13 +24,23 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+
 }
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        
+    }
+    ext {
+        googleMapsApiKey = getGoogleMapsApiKey()
+    }
+    gradle.projectsEvaluated {
+        subprojects { subproject ->
+            if (subproject.name == "app") {
+                subproject.android.defaultConfig.buildConfigField("String", "GOOGLE_API_KEY", "\"${googleMapsApiKey}\"")
+            }
+        }
     }
 }
 

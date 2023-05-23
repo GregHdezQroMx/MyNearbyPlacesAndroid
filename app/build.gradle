@@ -4,7 +4,7 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.jght.nearbyplaces"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:16.0.0'
 
     //Maps
-    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitLibrary"

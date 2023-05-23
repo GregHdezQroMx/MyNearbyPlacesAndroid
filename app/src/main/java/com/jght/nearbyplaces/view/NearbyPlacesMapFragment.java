@@ -39,6 +39,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.jght.nearbyplaces.BuildConfig;
 import com.jght.nearbyplaces.R;
 import com.jght.nearbyplaces.Repository.models.google_places.NearbyPlaces;
 import com.jght.nearbyplaces.Repository.models.google_places.Result;
@@ -286,7 +287,7 @@ public class NearbyPlacesMapFragment extends Fragment implements OnMapReadyCallb
     private void getNearbyPlaces(final String searchText, final Location myLocation) {
         final NearbyPlacesInteractor interactor = new NearbyPlacesInteractor();
 
-        interactor.searchNearbyPlaces(searchText, myLocation, getString(R.string.google_api_key), new NearbyPlacesInteractor.RetrofitListener() {
+        interactor.searchNearbyPlaces(searchText, myLocation, BuildConfig.GOOGLE_API_KEY, new NearbyPlacesInteractor.RetrofitListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 //nearbyPlaces.getResults().clear();
@@ -303,7 +304,7 @@ public class NearbyPlacesMapFragment extends Fragment implements OnMapReadyCallb
                 nearbyPlaces = NearbyPlaces.getInstance( ((NearbyPlaces) result).getHtmlAttributions(),
                         ((NearbyPlaces) result).getResults(),
                         ((NearbyPlaces) result).getStatus() );
-                Utils.loadAllPlacesPhotos(nearbyPlaces, getString(R.string.google_api_key));
+                Utils.loadAllPlacesPhotos(nearbyPlaces, BuildConfig.GOOGLE_API_KEY);
 
                 // Asign adapter to Recyclerview
                 nearbyPlacesAdapter =  new NearbyPlacesAdapter(nearbyPlaces, new NearbyPlacesAdapter.NearbyPlacesClickListener() {

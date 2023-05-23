@@ -1,7 +1,4 @@
 <resources>
+
     <string name="app_name">My Nearby Places</string>}
-
-    <!--REPLACE BY OWN API KEY-->
-    <string name="google_api_key" translatable="false">AIzaSyB00BsWrcR6n1KBk8ap9_Zqm2GPYBtJbdk</string>
-
 </resources>

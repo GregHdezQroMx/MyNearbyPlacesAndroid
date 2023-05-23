@@ -51,7 +51,7 @@ public class NearbyPlacesInteractor {
 
         String sLocation = latitude + "," + longitude;
 
-        nearbyPlacesCall = service.getNearbyPlaces(sLocation, RADIUS_SEARCH, TYPE_SEARCH, searchText, key); //getString(R.string.google_api_key));
+        nearbyPlacesCall = service.getNearbyPlaces(sLocation, RADIUS_SEARCH, TYPE_SEARCH, searchText, key);
 
         nearbyPlacesCall.enqueue(new Callback<NearbyPlaces>() {
             @Override
